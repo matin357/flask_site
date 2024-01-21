@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+    <style>
+        body{
+            margin: 0px;
+            background: url("https://www.imageshine.in/uploads/gallery/Free-vector-watercolor-background-Wallpaper.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        a{
+            text-decoration: none;
+            color: #EB5E28;
+            font-size: 30px;
+            margin-right: 30px;
+            margin-left: 15px;
+        }
+
+        }
+        .content{
+            width:60%;
+            margin-left:20%;
+            margin-top:-20px;
+            background-color: rgba(37, 36, 34, 0.8);
+            color: #CCC5B9;
+        }
+        h1{
+        color: #f0faeb;
+        font-size: 40px;
+        }
+        label{
+        color: #f0faeb;
+        font-size: 20px;
+        }
+        input{
+        background-color:#0a0a0a;
+        color:#faf9f5;
+        }
+        .name_input{
+        marin-left: 50px;
+        font-size: 35px;
+        }
+        .button{
+        margin-left: 50px;
+        margin-top: 200px;
+        font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Реєстрація на проходження до нашого магазину.</h1>
+    <form action="/submit_form" method="post">
+        <label class="name_input" for="name">Введіть ваше ім'я: </label>
+        <input class="name_input" type="text" id="nme" name="name" required>
+        <br>
+        <input class="button" type="submit" value="Надіслати">
+    </form>
+
+</body>
+</html>
