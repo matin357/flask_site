@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University</title>
+</head>
+<body>
+<h2>Add company</h2>
+<form action="/add_company" method="post">
+    <label for="c_name">Teacher name:</label>
+    <input type="text" id="c_name" name="name"><br>
+    <input type="submit" value="Add company">
+</form>
+
+<h2>Add food</h2>
+<form action="/add_food" method="post">
+    <label for="f_name">food name:</label>
+    <input type="text" id="f_name" name="name"><br>
+    <input type="submit" value="Add food">
+</form>
+
+<h2>Pair company and food</h2>
+<form action="/pair_company_food" method="post">
+    <label for="c_id">company ID:</label>
+    <input type="text" id="c_id" name="company_id"><br>
+    <label for="f_id">food ID:</label>
+    <input type="text" id="f_id" name="food_id"><br>
+    <input type="submit" value="Pair!">
+</form>
+</body>
+</html>
