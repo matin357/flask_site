@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+</head>
+<body>
+<h2>Add Teacher</h2>
+<form action="/add_teacher" id="teacherForm" method="post">
+    <label for="t_name">Teacher name:</label>
+    <input type="text" id="t_name" name="name"><br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="hidden" id="hashedPassword" name="hashedPassword">
+    <input type="submit" value="Add teacher">
+</form>
+
+<h2>Add Student</h2>
+<form action="/add_student" id="studentForm" method="post">
+    <label for="s_name">Student name:</label>
+    <input type="text" id="s_name" name="name"><br>
+    <input type="submit" value="Add student">
+</form>
+
+<h2>Pair teacher and student</h2>
+<form action="/pair_teacher_student" method="post">
+    <label for="t_id">Teacher ID:</label>
+    <input type="text" id="t_id" name="teacher_id"><br>
+    <label for="s_id">Student ID:</label>
+    <input type="text" id="s_id" name="student_id"><br>
+    <input type="submit" value="Pair!">
+</form>
+
+<script>
+        document.getElementById('teacherForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var password = document.getElementById('password').value;
+            var hashedPassword = sha256(password);
+
+            document.getElementById('hashedPassword').value = hashedPassword;
+
+            this.submit();
+        });
+    </script>
+<script>
+        document.getElementById('studentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var password = document.getElementById('password').value;
+            var hashedPassword = sha256(password);
+
+            document.getElementById('hashedPassword').value = hashedPassword;
+
+            this.submit();
+        });
+    </script>
+</body>
+</html>
